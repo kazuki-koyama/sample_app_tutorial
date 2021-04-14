@@ -1,5 +1,11 @@
 <% if logged_in? %>
-  <%= render 'static_pages/home_logged_in' %>
+  <div class="row">
+    <%= render 'static_pages/home_logged_in' %>
+      <div class="col-md-8">
+        <h3>Micropost Feed</h3>
+        <%= render 'shared/feed' %>
+      </div>
+  </div>
 <% else %>
   <%= render 'static_pages/home_not_logged_in' %>
 <% end %>
